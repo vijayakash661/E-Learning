@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAR Learn - Python Programming</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="content.css">
+</head>
+
+<body>
+    <header class="bg-white shadow-sm fixed-top w-100">
+        <div class="header w-100 py-1 px-4 d-flex flex-wrap align-items-center justify-content-between">
+            <!-- Logo and Title -->
+            <div class="d-flex align-items-center">
+                <img src="https://yarts.in/assets/YAR-Logo-CQWX_sNL.jpg" height="60" width="60" alt="YAR Logo">
+                <div class="ms-3">
+                    <h3 class="text-primary mb-0">YAR LEARN</h3>
+                    <!-- Welcome Message (Mobile Style) -->
+                    <h6 class="text-secondary d-lg-none" id="welcomeMessageMobile">Welcome, [Username]</h6>
+                </div>
+            </div>
+
+            <!-- Welcome Message (Laptop Style) -->
+            <h1 class="text-center mx-auto my-2 my-lg-0 d-none d-lg-block" id="welcomeMessageDesktop">Welcome,
+                [Username]</h1>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#copyrights">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Nav Button -->
+            <button class="btn btn-primary mobile-nav-btn d-lg-none" onclick="toggleSidebar()">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobileSidebar">
+        <nav class="nav flex-column p-3">
+            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href="courses.html">Courses</a>
+            <a class="nav-link" href="#copyrights">About</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- Intro Section -->
+    <section class=" intro text-center text-white position-relative"
+        style="background-image: url('https://img.freepik.com/free-vector/particle-style-cyber-network-visualization-wallpaper-with-text-space_1017-44855.jpg'); height: 200px; background-size: cover;">
+        <h1 class="position-absolute bottom-0 start-50 translate-middle-x mt-3 mb-4" style="font-size: 35px;">PYTHON
+            PROGRAMMING</h1>
+    </section>
+
+    <!-- Content Section -->
+    <section class="container content my-5 p-3">
+        <h2 class="mb-4">Description</h2>
+        <p>Python is one of the most versatile and beginner-friendly programming languages...</p>
+
+        <h2 class="mt-4">1. Introduction to Python</h2>
+        <ul>
+            <li><b>What is Python?</b> Overview of Python’s history, applications, and why it’s so popular.</li>
+            <li><b>Setting Up the Environment:</b> Installing Python, setting up an IDE, and writing your first Python
+                script.</li>
+            <li><b>Python Syntax and Structure:</b> Understanding indentation, comments, and basic syntax rules.</li>
+        </ul>
+
+        <h2 class="mt-4">2. Python Basics</h2>
+        <ul>
+            <li><b>Data Types and Variables:</b> Working with integers, floats, strings, and boolean types.</li>
+            <li><b>Operators and Expressions:</b> Arithmetic, logical, comparison, and assignment operators.</li>
+            <li><b>Basic Input and Output:</b> Using <code>input()</code> for user input and <code>print()</code> for
+                output.</li>
+        </ul>
+
+        <h2 class="mt-4">3. Control Flow and Loops</h2>
+        <ul>
+            <li><b>Conditional Statements:</b> Using <code>if</code>, <code>elif</code>, and <code>else</code> to
+                control program flow.</li>
+            <li><b>Loops:</b> Working with <code>for</code> and <code>while</code> loops to iterate over data.</li>
+            <li><b>Break and Continue Statements:</b> Managing loop control with <code>break</code>,
+                <code>continue</code>, and <code>pass</code>.</li>
+        </ul>
+
+        <h2 class="mt-4">4. Functions in Python</h2>
+        <ul>
+            <li><b>Defining Functions:</b> Creating functions using <code>def</code>, understanding function arguments
+                and return values.</li>
+            <li><b>Lambda Functions:</b> Using anonymous functions for quick computations.</li>
+            <li><b>Scope and Lifetime of Variables:</b> Understanding global and local scope.</li>
+        </ul>
+
+        <h2 class="mt-4">5. Data Structures</h2>
+        <ul>
+            <li><b>Lists:</b> Creating, accessing, modifying, and slicing lists.</li>
+            <li><b>Tuples:</b> Working with immutable sequences and when to use tuples.</li>
+            <li><b>Dictionaries:</b> Creating key-value pairs, accessing, and modifying dictionary data.</li>
+            <li><b>Sets:</b> Working with unique data, set operations (union, intersection, difference).</li>
+        </ul>
+
+        <h2 class="mt-4">6. File Handling</h2>
+        <ul>
+            <li><b>Reading and Writing Files:</b> Using <code>open()</code>, <code>read()</code>, <code>write()</code>,
+                and <code>close()</code> to handle files.</li>
+            <li><b>Working with File Paths:</b> Using <code>os.path</code> to manage file locations.</li>
+            <li><b>Exception Handling:</b> Implementing <code>try</code>, <code>except</code>, <code>finally</code> to
+                handle file errors.</li>
+        </ul>
+
+        <h2 class="mt-4">7. Object-Oriented Programming (OOP) in Python</h2>
+        <ul>
+            <li><b>Classes and Objects:</b> Defining classes, creating objects, and understanding <code>__init__</code>
+                method.</li>
+            <li><b>Attributes and Methods:</b> Adding properties and functions to classes.</li>
+            <li><b>Inheritance:</b> Understanding base classes, derived classes, and overriding methods.</li>
+            <li><b>Encapsulation, Abstraction, and Polymorphism:</b> Working with protected/private attributes and
+                method overloading.</li>
+        </ul>
+
+        <h2 class="mt-4">8. Modules and Packages</h2>
+        <ul>
+            <li><b>Importing Modules:</b> Using built-in modules like <code>math</code>, <code>random</code>, and
+                <code>datetime</code>.</li>
+            <li><b>Creating and Importing Your Own Modules:</b> Structuring code with modularity in mind.</li>
+            <li><b>Packages:</b> Organizing modules in packages and understanding the <code>__init__.py</code> file.
+            </li>
+        </ul>
+
+        <h2 class="mt-4">9. Working with Libraries</h2>
+        <ul>
+            <li><b>NumPy for Numerical Computations:</b> Introduction to arrays, vectorized operations, and basic data
+                analysis.</li>
+            <li><b>Pandas for Data Manipulation:</b> Using DataFrames, reading from CSV/Excel, and performing data
+                operations.</li>
+            <li><b>Matplotlib for Data Visualization:</b> Creating basic plots, customizing graphs, and interpreting
+                data visually.</li>
+        </ul>
+
+        <h2 class="mt-4">10. Web Scraping with Python (Optional)</h2>
+        <ul>
+            <li><b>Introduction to Web Scraping:</b> Overview of web scraping and ethical considerations.</li>
+            <li><b>Using <code>requests</code>:</b> Fetching data from web pages.</li>
+            <li><b>Parsing HTML with BeautifulSoup:</b> Navigating and extracting data from HTML documents.</li>
+        </ul>
+
+        <h2 class="mt-4">11. Data Science Basics with Python (Optional)</h2>
+        <ul>
+            <li><b>Exploratory Data Analysis (EDA):</b> Cleaning and exploring datasets.</li>
+            <li><b>Statistical Analysis:</b> Using libraries like <code>scipy</code> for basic statistics.</li>
+            <li><b>Machine Learning Introduction:</b> Basic concepts of machine learning and introduction to
+                Scikit-Learn.</li>
+        </ul>
+
+        <h2 class="mt-4">12. Capstone Project</h2>
+        <ul>
+            <li><b>Developing a Python Project:</b> Create a final project that integrates everything you’ve learned.
+            </li>
+            <li><b>Example Projects:</b> Options could include a text-based game, a data analysis report, or a web
+                scraper that collects and displays data.</li>
+            <li><b>Code Review and Feedback:</b> Present your project, receive feedback, and iterate.</li>
+        </ul>
+        <!-- More sections as required -->
+
+        <div class="text-center mt-5">
+            <a href="pythonprogramquiz.html" class="btn btn-primary btn-lg">Start Quiz</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="copyrights" class="bg-dark text-white py-4">
+        <div class="container text-center text-lg-start">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="text-primary">YAR LEARN</h3>
+                    <p>We are here to help you with any inquiries, support, or information you need.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5>Social</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-white text-decoration-none">LinkedIn</a></li>
+                                <li><a href="#" class="text-white text-decoration-none">Instagram</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <h5>Company</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                                <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <small>© 2024 YAR Tech Services. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="content.js"></script>
+</body>
+
+</html>

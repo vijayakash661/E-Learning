@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAR Learn - Java Programming</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="content.css">
+</head>
+
+<body>
+    <header class="bg-white shadow-sm fixed-top w-100">
+        <div class="header w-100 py-1 px-4 d-flex flex-wrap align-items-center justify-content-between">
+            <!-- Logo and Title -->
+            <div class="d-flex align-items-center">
+                <img src="https://yarts.in/assets/YAR-Logo-CQWX_sNL.jpg" height="60" width="60" alt="YAR Logo">
+                <div class="ms-3">
+                    <h3 class="text-primary mb-0">YAR LEARN</h3>
+                    <!-- Welcome Message (Mobile Style) -->
+                    <h6 class="text-secondary d-lg-none" id="welcomeMessageMobile">Welcome, [Username]</h6>
+                </div>
+            </div>
+
+            <!-- Welcome Message (Laptop Style) -->
+            <h1 class="text-center mx-auto my-2 my-lg-0 d-none d-lg-block" id="welcomeMessageDesktop">Welcome,
+                [Username]</h1>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#copyrights">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Nav Button -->
+            <button class="btn btn-primary mobile-nav-btn d-lg-none" onclick="toggleSidebar()">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobileSidebar">
+        <nav class="nav flex-column p-3">
+            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href="courses.html">Courses</a>
+            <a class="nav-link" href="#copyrights">About</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- Intro Section -->
+    <section class=" intro text-center text-white position-relative"
+        style="background-image: url('https://img.freepik.com/free-photo/abstract-futuristic-background-with-3d-design_1361-3532.jpg?t=st=1731173894~exp=1731177494~hmac=2acff197c7baf650847e8e753656affb68c9a4a43db9b224424242b6c5f57410&w=1060'); height: 200px; background-size: cover;">
+        <h1 class="position-absolute bottom-0 start-50 translate-middle-x mt-3 mb-4" style="font-size: 35px;">JAVA
+            PROGRAMMING</h1>
+    </section>
+
+    <!-- Content Section -->
+    <section class="container content my-5 p-3">
+        <h2 class="mb-4">Description</h2>
+        <p>This course provides a comprehensive introduction to Java programming...</p>
+
+        <h2 class="mt-4">1. Introduction to Java</h2>
+        <ul>
+            <li><b>What is Java?</b> Understanding the history, usage, and platform independence of Java.</li>
+            <li><b>Setting Up Java Environment:</b> Installing JDK, setting up an IDE, and writing your first Java
+                program.</li>
+            <li><b>Java Program Structure:</b> Understanding classes, methods, and the main method.</li>
+        </ul>
+
+        <h2 class="mt-4">2. Java Basics</h2>
+        <ul>
+            <li><b>Data Types and Variables:</b> Primitive types, strings, and variable declaration.</li>
+            <li><b>Operators:</b> Arithmetic, relational, logical, and assignment operators.</li>
+            <li><b>Control Structures:</b> if statements, switch cases, loops (for, while, do-while), and flow control.
+            </li>
+            <li><b>Input and Output:</b> Using Scanner for user input and System.out for output.</li>
+        </ul>
+
+        <h2 class="mt-4">3. Object-Oriented Programming (OOP) in Java</h2>
+        <ul>
+            <li><b>Classes and Objects</b> Creating classes, constructors, and instances.</li>
+            <li><b>Inheritance: </b> Understanding superclasses, subclasses, and the extends keyword.</li>
+            <li><b>Polymorphism:</b> Method overriding and dynamic method dispatch.</li>
+            <li><b>Encapsulation and Abstraction: </b> Using access modifiers (public, private, protected) and
+                understanding abstract classes and interfaces.</li>
+        </ul>
+        <h2 class="mt-4">4. Exception Handling and Debugging</h2>
+        <ul>
+            <li><b>Exception Handling: </b> Using try, catch, finally, throw, and custom exceptions.</li>
+            <li><b>Common Exceptions:</b> Handling NullPointerException, ArrayIndexOutOfBoundsException, and more.</li>
+            <li><b>Debugging Techniques:</b> Best practices for debugging Java code.</li>
+        </ul>
+        <h2 class="mt-4">5. Java Collections Frameworkt</h2>
+        <ul>
+            <li><b>Introduction to Collections:</b> Understanding the importance of collections in Java.</li>
+            <li><b>List, Set, and Map Interfaces:</b> Using ArrayList, LinkedList, HashSet, HashMap, and more.</li>
+            <li><b>Iterating through Collections: </b>Using iterators, enhanced for loop, and lambda expressions.</li>
+            <li><b>Sorting and Searching Collections:</b>Using Collections utility methods.</li>
+        </ul>
+        <h2 class="mt-4">6. File Handling in Java</h2>
+        <ul>
+            <li><b>Reading and Writing Files:</b>Using FileReader, FileWriter, and BufferedReader.</li>
+            <li><b>Serialization: </b> Saving and loading objects using serialization and ObjectOutputStream.</li>
+            <li><b>Handling I/O Exceptions: </b>Ensuring proper error handling with file operations.</li>
+        </ul>
+        <h2 class="mt-4">7. Java Swing and GUI Programming</h2>
+        <ul>
+            <li><b>Introduction to Swing:</b>Basics of GUI components (JFrame, JPanel, JButton).</li>
+            <li><b>Event Handling: </b> Handling button clicks and user inputs in a GUI.</li>
+        </ul>
+        <h2 class="mt-4">8. Multithreading and Concurrency</h2>
+        <ul>
+            <li><b>What is Multithreading?:</b> Understanding concurrency and parallel processing in Java.</li>
+            <li><b>Creating Threads: </b> Using Runnable interface and Thread class.</li>
+            <li><b>Synchronization:</b> Ensuring thread safety and managing shared resources.</li>
+            <li><b>Concurrency Utilities:</b>Using Java’s concurrency utilities (ExecutorService, Future, etc.).</li>
+        </ul>
+
+
+
+        <div class="text-center mt-5">
+            <a href="javaprogramquiz.html" class="btn btn-primary btn-lg">Start Quiz</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="copyrights" class="py-4 mt-4 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
+                    <h3 class="text-primary">YAR LEARN</h3>
+                    <p>We are here to help you with any inquiries, support, or information you need.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-6 text-center text-lg-start mb-3 mb-lg-0">
+                            <h5>Social</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-white text-decoration-none">LinkedIn</a></li>
+                                <li><a href="#" class="text-white text-decoration-none">Instagram</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 text-center text-lg-start">
+                            <h5>Company</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                                <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <small>© 2024 YAR Tech Services. All rights reserved.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="content.js"></script>
+</body>
+
+</html>

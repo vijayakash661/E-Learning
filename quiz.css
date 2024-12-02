@@ -1,0 +1,200 @@
+.header {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+/* Desktop Welcome Message */
+#welcomeMessageDesktop {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Mobile Welcome Message */
+#welcomeMessageMobile {
+    font-size: 1rem;
+    color: #666;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+
+
+
+.intro {
+    background-image: linear-gradient(-45deg, rgb(47, 0, 255) 0%, rgb(255, 0, 179) 25%, rgb(0, 170, 255) 51%, #fc35ff 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.intro {
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg, rgb(47, 0, 255) 0%, rgb(255, 0, 179) 25%, rgb(0, 170, 255) 51%, #fc35ff 100%);
+    -webkit-animation: AnimateBG 20s ease infinite;
+    animation: AnimateBG 20s ease infinite;
+}
+
+@-webkit-keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+#quiz-container,
+#result {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgb(236, 236, 236);
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px;
+    text-align: center;
+}
+
+#quiz-container button:hover {
+    background-color: white;
+    color: #0080ff;
+
+}
+
+#question {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: rgb(7, 131, 255);
+}
+
+#options button {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border: 1px solid #000000;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+
+    width: 400px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#options button:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border: solid 1px;
+    transition: 1s;
+}
+
+#result {
+    display: none;
+    line-height: 2.1;
+}
+
+button:hover {
+    color: white;
+    background-color: rgb(0, 67, 160);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+/* Sidebar styles only for mobile */
+@media (max-width: 768px) {
+    #mobileSidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #0080ff;
+        overflow-y: auto;
+        transition: 0.3s ease-in-out;
+        z-index: 1050;
+    }
+
+    #mobileSidebar.open {
+        left: 0;
+    }
+
+    #mobileSidebar .nav-link {
+        color: #ffffff;
+        padding: 10px 15px;
+    }
+
+    #mobileSidebar .nav-link:hover {
+        background-color: #52a9ff;
+    }
+
+    #sidebarOverlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1049;
+    }
+
+    #sidebarOverlay.show {
+        display: block;
+    }
+
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .mobile-nav-btn {
+        display: inline-block !important;
+    }
+}
+
+/* For desktop, hide mobile elements */
+@media (min-width: 769px) {
+
+    #mobileSidebar,
+    #sidebarOverlay,
+    .mobile-nav-btn {
+        display: none;
+    }
+}
+
+#copyrights {
+    background-color: #000;
+    color: white;
+    font-size: 14px;
+}
+
+#copyrights a:hover {
+    text-decoration: underline;
+}

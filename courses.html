@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAR Learn - Courses</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        .header {
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        }
+
+        /* Desktop Welcome Message */
+        #welcomeMessageDesktop {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #333;
+
+        }
+
+        /* Mobile Welcome Message */
+        #welcomeMessageMobile {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .course-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .course-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            scroll-behavior: smooth;
+        }
+
+        /* Sidebar styles only for mobile */
+        @media (max-width: 768px) {
+            #mobileSidebar {
+                position: fixed;
+                top: 0;
+                left: -250px;
+                width: 250px;
+                height: 100%;
+                background-color: #0080ff;
+                overflow-y: auto;
+                transition: 0.3s ease-in-out;
+                z-index: 1050;
+            }
+
+            #mobileSidebar.open {
+                left: 0;
+            }
+
+            #mobileSidebar .nav-link {
+                color: #ffffff;
+                padding: 10px 15px;
+            }
+
+            #mobileSidebar .nav-link:hover {
+                background-color: #52a9ff;
+            }
+
+            #sidebarOverlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1049;
+            }
+
+            #sidebarOverlay.show {
+                display: block;
+            }
+
+            .desktop-nav {
+                display: none !important;
+            }
+
+            .mobile-nav-btn {
+                display: inline-block !important;
+            }
+        }
+
+        /* For desktop, hide mobile elements */
+        @media (min-width: 769px) {
+
+            #mobileSidebar,
+            #sidebarOverlay,
+            .mobile-nav-btn {
+                display: none;
+            }
+        }
+
+        #copyrights {
+            background-color: #000;
+            color: white;
+            font-size: 14px;
+        }
+
+        #copyrights a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-white shadow-sm fixed-top w-100">
+        <div class="header w-100 py-1 px-4 d-flex flex-wrap align-items-center justify-content-between">
+            <!-- Logo and Title -->
+            <div class="d-flex align-items-center">
+                <img src="https://yarts.in/assets/YAR-Logo-CQWX_sNL.jpg" height="60" width="60" alt="YAR Logo">
+                <div class="ms-3">
+                    <h3 class="text-primary mb-0">YAR LEARN</h3>
+                    <!-- Welcome Message (Mobile Style) -->
+                    <h6 class="text-secondary d-lg-none" id="welcomeMessageMobile">Welcome, [Username]</h6>
+                </div>
+            </div>
+
+            <!-- Welcome Message (Laptop Style) -->
+            <h1 class="text-center mx-auto my-2 my-lg-0 d-none d-lg-block" id="welcomeMessageDesktop">Welcome,
+                [Username]</h1>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#copyrights">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Nav Button -->
+            <button class="btn btn-primary mobile-nav-btn d-lg-none" onclick="toggleSidebar()">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobileSidebar">
+        <nav class="nav flex-column p-3">
+            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href="courses.html">Courses</a>
+            <a class="nav-link" href="#copyrights">About</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+
+    <main class="container mt-5 pt-5">
+        <h1 class="text-center mb-4">Courses</h1>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card course-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Development Basics</h5>
+                        <p class="card-text">HTML, CSS, and JavaScript for beginners.</p>
+                        <a href="webdevelopment.html" class="btn btn-primary">Learn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card course-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Full Stack Development</h5>
+                        <p class="card-text">Dive into databases, APIs, and frameworks.</p>
+                        <a href="fullstackdevelopment.html" class="btn btn-primary">Learn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card course-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Java Programming</h5>
+                        <p class="card-text">Advanced concepts for mobile apps.</p>
+                        <a href="javaprogram.html" class="btn btn-primary">Learn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card course-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Python Programming</h5>
+                        <p class="card-text">Data science and automation tools.</p>
+                        <a href="pythonprogram.html" class="btn btn-primary">Learn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer id="copyrights" class="py-4 mt-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Section: Description -->
+                <div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
+                    <h3 class="text-primary">YAR LEARN</h3>
+                    <p>We are here to help you with any inquiries, support, or information you need.</p>
+                </div>
+
+                <!-- Right Section: Social Links and Quick Links -->
+                <div class="col-lg-6">
+                    <div class="row">
+                        <!-- Social Links -->
+                        <div class="col-6 text-center text-lg-start mb-3 mb-lg-0">
+                            <h5>Social</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="https://www.linkedin.com/company/yar-tech-services/"
+                                        class="text-white text-decoration-none">LinkedIn</a></li>
+                                <li><a href="https://www.instagram.com/yar_tech_service/"
+                                        class="text-white text-decoration-none">Instagram</a></li>
+                            </ul>
+                        </div>
+                        <!-- Company Links -->
+                        <div class="col-6 text-center text-lg-start">
+                            <h5>Company</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                                <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Copyright -->
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <small>© 2024 YAR Tech Services. All rights reserved. - <a href="https://yarts.in"
+                            class="text-white text-decoration-none">yarts.in</a></small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('mobileSidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('show');
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+            const welcomeMessageMobile = document.getElementById('welcomeMessageMobile');
+            const welcomeMessageDesktop = document.getElementById('welcomeMessageDesktop');
+
+            // Save user details on Sign-Up
+            if (signupForm) {
+                signupForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const user = {
+                        fname: document.getElementById('fname').value,
+                        lname: document.getElementById('lname').value,
+                        email: document.getElementById('signupEmail').value,
+                        password: document.getElementById('signupPassword').value,
+                    };
+                    localStorage.setItem('user', JSON.stringify(user));
+                    alert('Sign-Up successful!');
+                    window.location.href = 'index.html';
+                });
+            }
+
+            // Validate user details on Login
+            if (loginForm) {
+                loginForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const email = document.getElementById('email').value;
+                    const password = document.getElementById('password').value;
+                    const user = JSON.parse(localStorage.getItem('user'));
+
+                    if (user && user.email === email && user.password === password) {
+                        localStorage.setItem('loggedInUser', user.fname);
+                        window.location.href = 'home.html';
+                    } else {
+                        alert('Invalid email or password');
+                    }
+                });
+            }
+
+            // Display username on Home Page for Mobile and Laptop Views
+            const displayWelcomeMessage = (user) => {
+                if (welcomeMessageMobile) {
+                    welcomeMessageMobile.textContent = `Welcome, ${user}`;
+                }
+                if (welcomeMessageDesktop) {
+                    welcomeMessageDesktop.textContent = `Welcome, ${user}`;
+                }
+            };
+
+            const loggedInUser = localStorage.getItem('loggedInUser');
+            if (loggedInUser) {
+                displayWelcomeMessage(loggedInUser);
+            } else if (welcomeMessageMobile || welcomeMessageDesktop) {
+                // Redirect to login if not logged in
+                window.location.href = 'index.html';
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

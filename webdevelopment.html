@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAR Learn - Web Development</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="content.css">
+</head>
+
+<body>
+    <header class="bg-white shadow-sm fixed-top w-100">
+        <div class="header w-100 py-1 px-4 d-flex flex-wrap align-items-center justify-content-between">
+            <!-- Logo and Title -->
+            <div class="d-flex align-items-center">
+                <img src="https://yarts.in/assets/YAR-Logo-CQWX_sNL.jpg" height="60" width="60" alt="YAR Logo">
+                <div class="ms-3">
+                    <h3 class="text-primary mb-0">YAR LEARN</h3>
+                    <!-- Welcome Message (Mobile Style) -->
+                    <h6 class="text-secondary d-lg-none" id="welcomeMessageMobile">Welcome, [Username]</h6>
+                </div>
+            </div>
+
+            <!-- Welcome Message (Laptop Style) -->
+            <h1 class="text-center mx-auto my-2 my-lg-0 d-none d-lg-block" id="welcomeMessageDesktop">Welcome,
+                [Username]</h1>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#copyrights">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Nav Button -->
+            <button class="btn btn-primary mobile-nav-btn d-lg-none" onclick="toggleSidebar()">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobileSidebar">
+        <nav class="nav flex-column p-3">
+            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href="courses.html">Courses</a>
+            <a class="nav-link" href="#copyrights">About</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+
+
+    <!-- Intro Section -->
+    <section class=" intro text-center text-white position-relative"
+        style="background-image: url('https://photo-cdn2.icons8.com/2nvzy6HA1JCpV_65yQoRQXcKH9pf6j3ahsuOCIRUJEA/rs:fit:1906:1072/czM6Ly9pY29uczgu/bW9vc2UtcHJvZC5l/eHRlcm5hbC9hMmE0/Mi9kMTEyODJhMGEx/MjQ0MWRkYTkzMGE3/ODEzMzUwYWRlZC5q/cGc.jpg'); height: 200px; background-size: cover;">
+        <h1 class="position-absolute bottom-0 start-50 translate-middle-x mt-3 mb-4" style="font-size: 35px;">WEB
+            DEVELOPMENT</h1>
+    </section>
+
+
+    <!-- Content Section -->
+    <div class="container content my-5 p-3">
+        <h2 class="mb-4">Description</h2>
+        <p>This course is designed to introduce you to the foundational skills required to build and style websites...
+        </p>
+
+        <h2 class="mb-4">1. Introduction to Web Development</h2>
+        <ul>
+            <li><b>Overview of Web Development:</b> Learn about front-end and back-end development...</li>
+            <li><b>The Structure of a Web Page:</b> Understand the basic structure of a web page, including how HTML,
+                CSS, and JavaScript work together to create websites.</li>
+            <li><b>Setting Up Your Environment:</b> Install a text editor (such as VS Code) and set up your workspace.
+            </li>
+        </ul>
+        <h2 class="mb-4">2. HTML Basics</h2>
+        <ul>
+            <li><b>What is HTML?</b> Learn what HTML is and why it’s the foundation of web pages.</li>
+            <li><b>HTML Elements and Structure:</b> Explore tags, attributes, headings, paragraphs, and lists.</li>
+            <li><b>Links and Images:</b> Learn how to add links, images, and other media to your page.</li>
+            <li><b>Forms and Inputs:</b> Create forms with inputs, buttons, and more for collecting user data.</li>
+            <li><b>Project:</b> Create a simple, structured webpage using HTML elements.</li>
+        </ul>
+        <h2 class="mb-4">3. CSS Basics</h2>
+        <ul>
+            <li><b>What is CSS?</b> Understand how CSS is used to style and layout web pages.</li>
+            <li><b>CSS Selectors and Properties:</b> Learn about different types of selectors (class, ID, element) and
+                basic properties (color, font, background).</li>
+            <li><b>Box Model:</b> Understand the box model and how padding, margin, and borders work.</li>
+            <li><b>Layouts with Flexbox and Grid:</b> Get introduced to Flexbox and CSS Grid for layout management.</li>
+            <li><b>Responsive Design:</b> Basics of making your page look good on different screen sizes with media
+                queries.</li>
+            <li><b>Project:</b> Build and style a simple webpage, using CSS to add colors, spacing, and layout.</li>
+        </ul>
+        <h2 class="mb-4">4. JavaScript Basics</h2>
+        <ul>
+            <li><b>What is JavaScript?</b> Discover how JavaScript adds interactivity to web pages.</li>
+            <li><b>JavaScript Syntax and Variables:</b> Learn about variables, data types, and basic syntax.</li>
+            <li><b>Functions and Events:</b> Create functions and learn about event handling to make web pages
+                interactive.</li>
+            <li><b>DOM Manipulation:</b> Understand how to select and modify HTML elements dynamically.</li>
+            <li><b>Simple JavaScript Project:</b> Create a basic interactive webpage that responds to user actions.</li>
+        </ul>
+        <h2 class="mb-4">5. Putting It All Together: A Simple Website Project</h2>
+        <ul>
+            <li><b>Combining HTML, CSS, and JavaScript:</b> Use all three languages to create a multi-page website.</li>
+            <li><b>Building a Portfolio Site:</b> Create a personal portfolio site with a homepage, about section, and
+                contact form.</li>
+            <li><b>Final Project:</b> Build a small website from scratch, applying all the skills learned in this
+                course.</li>
+        </ul>
+
+
+
+        <div class="text-center mt-5">
+            <a href="webdevelopmentquiz.html" class="btn btn-primary btn-lg">Start Quiz</a>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer id="copyrights" class="py-4 mt-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Section: Description -->
+                <div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
+                    <h3 class="text-primary">YAR LEARN</h3>
+                    <p>We are here to help you with any inquiries, support, or information you need.</p>
+                </div>
+
+                <!-- Right Section: Social Links and Quick Links -->
+                <div class="col-lg-6">
+                    <div class="row">
+                        <!-- Social Links -->
+                        <div class="col-6 text-center text-lg-start mb-3 mb-lg-0">
+                            <h5>Social</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="https://www.linkedin.com/company/yar-tech-services/"
+                                        class="text-white text-decoration-none">LinkedIn</a></li>
+                                <li><a href="https://www.instagram.com/yar_tech_service/"
+                                        class="text-white text-decoration-none">Instagram</a></li>
+                            </ul>
+                        </div>
+                        <!-- Company Links -->
+                        <div class="col-6 text-center text-lg-start">
+                            <h5>Company</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                                <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Copyright -->
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <small>© 2024 YAR Tech Services. All rights reserved. - <a href="https://yarts.in"
+                            class="text-white text-decoration-none">yarts.in</a></small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="content.js"></script>
+</body>
+
+</html>

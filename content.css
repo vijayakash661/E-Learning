@@ -1,0 +1,127 @@
+.header {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+/* Desktop Welcome Message */
+#welcomeMessageDesktop {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Mobile Welcome Message */
+#welcomeMessageMobile {
+    font-size: 1rem;
+    color: #666;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+
+.intro h1 {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    animation: textclip 4s linear infinite;
+    font-size: 2.5rem;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.content {
+    border: 2px solid rgb(7, 131, 255);
+    border-radius: 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px;
+    line-height: 2.9;
+}
+
+#copyrights {
+    background-color: #000;
+    color: white;
+    font-size: 14px;
+}
+
+#copyrights a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Sidebar styles only for mobile */
+@media (max-width: 768px) {
+    #mobileSidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #0080ff;
+        overflow-y: auto;
+        transition: 0.3s ease-in-out;
+        z-index: 1050;
+    }
+
+    #mobileSidebar.open {
+        left: 0;
+    }
+
+    #mobileSidebar .nav-link {
+        color: #ffffff;
+        padding: 10px 15px;
+    }
+
+    #mobileSidebar .nav-link:hover {
+        background-color: #52a9ff;
+    }
+
+    #sidebarOverlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1049;
+    }
+
+    #sidebarOverlay.show {
+        display: block;
+    }
+
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .mobile-nav-btn {
+        display: inline-block !important;
+    }
+}
+
+/* For desktop, hide mobile elements */
+@media (min-width: 769px) {
+
+    #mobileSidebar,
+    #sidebarOverlay,
+    .mobile-nav-btn {
+        display: none;
+    }
+}
+
+#copyrights {
+    background-color: #000;
+    color: white;
+    font-size: 14px;
+}
+
+#copyrights a:hover {
+    text-decoration: underline;
+}

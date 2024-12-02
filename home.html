@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAR Learn</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <header class="bg-white shadow-sm fixed-top w-100">
+        <div class="header w-100 py-1 px-4 d-flex flex-wrap align-items-center justify-content-between">
+            <!-- Logo and Title -->
+            <div class="d-flex align-items-center">
+                <img src="https://yarts.in/assets/YAR-Logo-CQWX_sNL.jpg" height="60" width="60" alt="YAR Logo">
+                <div class="ms-3">
+                    <h3 class="text-primary mb-0">YAR LEARN</h3>
+                    <!-- Welcome Message (Mobile Style) -->
+                    <h6 class="text-secondary d-lg-none" id="welcomeMessageMobile">Welcome, [Username]</h6>
+                </div>
+            </div>
+
+            <!-- Welcome Message (Laptop Style) -->
+            <h1 class="text-center mx-auto my-2 my-lg-0 d-none d-lg-block" id="welcomeMessageDesktop">Welcome,
+                [Username]</h1>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#copyrights">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Nav Button -->
+            <button class="btn btn-primary mobile-nav-btn d-lg-none" onclick="toggleSidebar()">☰</button>
+        </div>
+    </header>
+
+
+    <!-- Mobile Sidebar -->
+    <div id="mobileSidebar">
+        <nav class="nav flex-column p-3">
+            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href="courses.html">Courses</a>
+            <a class="nav-link" href="#copyrights">About</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- Introduction Section -->
+    <section class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://img.freepik.com/free-photo/teacher-talking-with-her-students-online_23-2148771464.jpg"
+                    width="500px" class="img-fluid pt-5" alt="Responsive image">
+            </div>
+            <div class="col-md-6 mt-5">
+                <p>
+                    At <strong>Yar Learn</strong>, we believe that learning should be interactive, skill-focused, and
+                    effective. Whether you’re looking to get started with the basics of web development or aiming to
+                    master full-stack development, we have a tailored learning path for you. Our platform offers
+                    hands-on courses, practical projects, and real-time quizzes to help you build and test your
+                    knowledge every step of the way. From HTML and CSS to advanced frameworks and full-stack techniques,
+                    our courses cover the essential and cutting-edge skills needed in today’s tech landscape. With a
+                    focus on building real projects, you’ll gain hands-on experience that goes beyond textbooks,
+                    preparing you for real challenges in development.
+                </p>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <h1>Learn Without Limits</h1>
+            <p>Take the next step toward your personal and professional goals with Yar Learn.</p>
+            <a href="courses.html" class="btn btn-primary">Start Courses</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer id="copyrights" class="py-4 mt-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Section: Description -->
+                <div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
+                    <h3 class="text-primary">YAR LEARN</h3>
+                    <p>We are here to help you with any inquiries, support, or information you need.</p>
+                </div>
+
+                <!-- Right Section: Social Links and Quick Links -->
+                <div class="col-lg-6">
+                    <div class="row">
+                        <!-- Social Links -->
+                        <div class="col-6 text-center text-lg-start mb-3 mb-lg-0">
+                            <h5>Social</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="https://www.linkedin.com/company/yar-tech-services/"
+                                        class="text-white text-decoration-none">LinkedIn</a></li>
+                                <li><a href="https://www.instagram.com/yar_tech_service/"
+                                        class="text-white text-decoration-none">Instagram</a></li>
+                            </ul>
+                        </div>
+                        <!-- Company Links -->
+                        <div class="col-6 text-center text-lg-start">
+                            <h5>Company</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                                <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Copyright -->
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <small>© 2024 YAR Tech Services. All rights reserved. - <a href="https://yarts.in"
+                            class="text-white text-decoration-none">yarts.in</a></small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="home.js"></script>
+</body>
+
+</html>
